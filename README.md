@@ -30,6 +30,7 @@ Design
 This project was divided into several sections in order to make it more manageable. 
 PID and Transfer Function design in Matlab
 Rather than using the built-in transfer functions in Matlab, an algorithm loop was created by starting with a baseline motor model second order transfer function that was synthesized and programmed using numerical methods. An implementation of a PID controller was made using this transfer function approach. We were able to comprehend the steps the program would need to follow thanks to the way the method was designed in Matlab. An excerpt of our Matlab algorithm can be found here.
+
 % Step through time and solve the differential equation
     for i = 1:length(t)
         if i == 1
@@ -74,6 +75,7 @@ How a new user should utilize the system
 You can set the input variables and Kp Ki Kd to calculated or desired values in the testbench. This allows you to simulate the code and compare, via graphs, its outputs with the desired outcome. As Figure 1 illustrates
 
 
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/7bae0745-3dc6-4e5e-9ec9-ffb8c75b4573)
 
 Figure 1: Output approach with the target value of 500 displayed
 You can then modify your Kp Ki and Kd variables to achieve your desired outcomes. For example, a reduced overshoot percentage, a faster rise time, and a decreased steady state error. 
@@ -82,7 +84,9 @@ You can then modify your Kp Ki and Kd variables to achieve your desired outcomes
 Changing the transfer function to represent various systems
 It is possible to change the program's actual transfer function to represent various motor types. Case A of the FSM allows for the setting of a, b, and c values. These values match the transfer function values shown in the following illustration.
 
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/97136ad5-c380-454b-a1a5-f32b4d6cf97f)
 
+Figure 2: Transfer function formatting
 
 Future Objectives of the Program
 On a user's PC, this program should ideally not be mimicked. Operating on the actual FPGA board would be preferable. To avoid costly errors while loading the program on the real machine, this could be helpful for emulating motor performance and PID controller values. An ALU with registers to rapidly modify input and transfer function values would be this program's future version. This software wouldn't need to use up PC processing resources in order to execute rapidly and effectively on an FPGA. 
@@ -95,9 +99,14 @@ The results of our transfer function simulation using the PID controller were go
 
 
 
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/04357c7f-bc43-4516-a39f-d059be33cd59)
 
 Figure 3: the results of testing different Kp Ki & Kd values 
 This figure showcases the changing of Kp Ki and Kd values which have a goal output of 50.
+
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/58e70e5f-4bff-4a93-a834-566442897429)
+
+Figure 4: the results of testing different Kp Ki & Kd values 
 This figure showcases the changing of Kp Ki and Kd values which have a goal output of 500. 
 
 
@@ -110,11 +119,11 @@ The implementation of the PID controller and transfer function simulation were a
 
 
 Appendix
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/93f4c3fa-eb5a-4143-bdc1-217e6c09bb66)
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/34ed3ac2-3dc3-4617-80cd-da0d73acf06e)
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/7855ad58-f0d7-406c-a424-0987fcc549aa)
 
-
-
-
-
+![image](https://github.com/CarloB26/Final_Project_ECE_287/assets/153966309/7eb9bf6a-54cc-49c8-9f8c-d1654a10658d)
 
 Image showing where kp ki and kd values can be edited
 
